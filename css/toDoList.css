@@ -50,3 +50,7 @@
     padding: 5px;
     font-size: 20px;
 }
+
+.taskList__task--crossed {
+    text-decoration:line-through
+}
