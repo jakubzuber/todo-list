@@ -44,10 +44,14 @@
     list-style: inside;
 }
 
-.taskList__tasks {
-    margin: 5px 10px;
-    padding: 10px;
-    border-bottom: 1px solid green;
+.taskList__marker {
+    border-bottom: 1px solid #eee;
     list-style-type: "🟩";
+    padding: 5px;
+    font-size: 25px;
+}
+
+.taskList__tasks {
     font-size: 20px;
+    margin-left: 6px;
 }
