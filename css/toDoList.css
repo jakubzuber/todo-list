@@ -44,14 +44,9 @@
     list-style: inside;
 }
 
-.taskList__marker {
+.taskList__task {
     border-bottom: 1px solid #eee;
-    list-style-type: "🟩";
+    list-style-type: none;
     padding: 5px;
-    font-size: 25px;
-}
-
-.taskList__tasks {
     font-size: 20px;
-    margin-left: 6px;
 }
