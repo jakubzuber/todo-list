@@ -1,45 +1,8 @@
-.header {
-    margin-top: 35px;
-    margin-left: 20px;
-}
 
-.section {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-}
-
-.section__header {
-    background-color: white;
-    font-size: 20px;
-    padding: 15px;
-    margin: 7px 20px 1px 20px;
-}
-
-.form {
-    background-color: white;
-    padding: 20px;
-    margin: 1px 20px 1px 20px;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-}
-
-.form__input {
-    padding: 8px;
-    border-width: 2px;
-}
-
-.form__button {
-    background-color: teal;
-    color: white;
-    padding: 8px;
-    margin-left: 15px;
-    border-style: none;
-}
 
 .taskList {
     background-color: white;
-    padding: 20px;
+    padding: 15px;
     margin: 1px 20px 1px 20px;
     list-style: inside;
 }
@@ -48,9 +11,22 @@
     border-bottom: 1px solid #eee;
     list-style-type: none;
     padding: 5px;
-    font-size: 20px;
+    font-size: 17px;
+    justify-content: center;
 }
 
 .taskList__task--crossed {
     text-decoration:line-through
+}
+
+.list__buttonDone {
+    background-color: green;
+    padding: 10px;
+    margin-bottom: 2px;
+}
+
+.list_buttonRemove {
+   float: right;
+   background-color: red;
+   padding: 10px;
 }
