@@ -10,50 +10,46 @@
         },
     ];
 
-    const addTaskToList = () => {
-        let htmlAndClssInner = "";
+    const render = () => {
+        let htmlString = ""
 
         for (const task of tasks) {
-            htmlAndClssInner += `
-             <li ${task.done ? "class=\"taskList__task taskList__task--crossed \"" : "class=\"taskList__task\""}>
-             ${task.content}
-             </li>`;
-        };
+            htmlString += `
+            <li ${task.done ? "class=\"taskList__task taskList__task--crossed \"" : "class=\"taskList__task\""}>
+            ${task.content}
+            </li>`;
+        }
 
-        document.querySelector(".js-tasks").innerHTML = htmlAndClssInner;
+        document.querySelector(".js-tasks").innerHTML = htmlString;
     };
-
+    
     const addNewTask = (newTaskContent) => {
-        tasks.push(
-            {
-                content: newTaskContent,
-            }
-        )
-        addTaskToList();
+        tasks.push({
+            content: newTaskContent,
+        });
+
+        render();
     }
 
     const onFormSubmit = (event) => {
-            event.preventDefault();
+        event.preventDefault();
 
-            const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = document.querySelector(".js-newTask").value.trim();
 
-            if (newTaskContent === "") {
-                returnl
-            };
-            
-            addNewTask(newTaskContent);
-        };
-    
+        if (newTaskContent === "") {
+            return;
+        }
+
+        addNewTask(newTaskContent)
+    }
 
     const init = () => {
-        addTaskToList();
+        render()
 
         const form = document.querySelector(".js-form");
 
         form.addEventListener("submit", onFormSubmit);
-
-        
     };
+
     init();
-    
 };
