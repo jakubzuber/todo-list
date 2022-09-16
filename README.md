@@ -11,7 +11,7 @@ Application give user possibility to delete old task.
 
 ##
 
-![photo of application](.../photos/screenshot.png"photo of application").
+![alt text for screen readers](/photos/screenshot.png "Screen shot of currency calculator").
 
 ## Technologis:
 - CSS
