@@ -12,21 +12,26 @@
     list-style-type: none;
     padding: 5px;
     font-size: 17px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: 1fr 15fr 1fr;
 }
 
-.taskList__task--crossed {
-    text-decoration:line-through
+.list__taskText {
+    text-decoration:line-through;
+    margin-left: 10px;
+    margin-top: 5px;
 }
 
 .list__buttonDone {
     background-color: green;
-    padding: 10px;
-    margin-bottom: 2px;
+    color: white;
+    height: 33px;
+    width: 33px;
 }
+
 
 .list_buttonRemove {
    float: right;
    background-color: red;
-   padding: 10px;
+   height: 33px;
 }

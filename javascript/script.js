@@ -16,11 +16,12 @@
         });
 
         render();
+        newTaskContent.value = ''
     };
 
     const removeTask = (taskIndex) => {
         tasks.splice(taskIndex, 1);
-                render();
+        render();
     };
 
     const toggleTaskDone = (taskIndex) => {
@@ -35,7 +36,7 @@
             removeButton.addEventListener("click", () => {
                 removeTask(index);
             });
-           
+
         });
 
         const toggleDoneButtons = document.querySelectorAll(".js-done");
@@ -44,7 +45,6 @@
             toogleDoneButton.addEventListener("click", () => {
                 toggleTaskDone(index);
             });
-           
         });
     };
 
@@ -53,10 +53,11 @@
 
         for (const task of tasks) {
             htmlString += `
-            <li ${task.done ? "class=\"taskList__task taskList__task--crossed \"" : "class=\"taskList__task\""}>
-            <button class="js-done list__buttonDone"></button>
-            ${task.content}
-            <button class="js-remove list_buttonRemove"></button>
+            <li ${task.done ? "class=\"taskList__task\"" : "class=\"taskList__task\""}>
+            <button class="js-done list__buttonDone">${task.done ? "&#10004" : ""}</button>
+            <span ${task.done ? "class=\" list__taskText\"" : ""}>
+            ${task.content}</span>
+            <button class="js-remove list_buttonRemove">&#128465</button>
             </li>`;
         }
 
@@ -68,13 +69,15 @@
     const onFormSubmit = (event) => {
         event.preventDefault();
 
-        const newTaskContent = document.querySelector(".js-newTask").value.trim();
+        const newTaskContent = document.querySelector(".js-newTask");
+        const newTask = newTaskContent.value.trim();
 
-        if (newTaskContent === "") {
+        if (newTask === "") {
             return;
         }
 
-        addNewTask(newTaskContent)
+        addNewTask(newTask);
+        newTaskContent.value = "";
     };
 
     const init = () => {
@@ -86,4 +89,5 @@
     };
 
     init();
+
 };
