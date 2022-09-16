@@ -1,5 +1,3 @@
-
-
 .taskList {
     background-color: white;
     padding: 15px;
@@ -14,12 +12,13 @@
     font-size: 17px;
     display: grid;
     grid-template-columns: 1fr 15fr 1fr;
+    align-items: center;
 }
 
-.list__taskText {
+/*@media (max-width: 767px)*/
+
+.list_taskText--lineThrough {
     text-decoration:line-through;
-    margin-left: 10px;
-    margin-top: 5px;
 }
 
 .list__buttonDone {
@@ -27,11 +26,20 @@
     color: white;
     height: 33px;
     width: 33px;
+    border-style: none;
 }
 
+.list__buttonDone:active {
+    border: 2px solid black;
+}
 
 .list_buttonRemove {
    float: right;
    background-color: red;
    height: 33px;
+   border-style: none;
+}
+
+.list_buttonRemove:active {
+    border: 2px solid black;
 }
