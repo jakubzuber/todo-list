@@ -15,8 +15,6 @@
     align-items: center;
 }
 
-/*@media (max-width: 767px)*/
-
 .list_taskText--lineThrough {
     text-decoration:line-through;
 }
@@ -29,6 +27,11 @@
     border-style: none;
 }
 
+.list__buttonDone:hover {
+    background-color: rgb(1, 139, 1);
+    cursor: pointer;
+}
+
 .list__buttonDone:active {
     border: 2px solid black;
 }
@@ -38,6 +41,11 @@
    background-color: red;
    height: 33px;
    border-style: none;
+   cursor: pointer;
+}
+
+.list_buttonRemove:hover {
+    background-color: rgb(234, 89, 89);
 }
 
 .list_buttonRemove:active {
