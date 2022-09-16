@@ -10,26 +10,56 @@
         },
     ];
 
-    const render = () => {
-        let htmlString = ""
-
-        for (const task of tasks) {
-            htmlString += `
-            <li ${task.done ? "class=\"taskList__task taskList__task--crossed \"" : "class=\"taskList__task\""}>
-            ${task.content}
-            </li>`;
-        }
-
-        document.querySelector(".js-tasks").innerHTML = htmlString;
-    };
-    
     const addNewTask = (newTaskContent) => {
         tasks.push({
             content: newTaskContent,
         });
 
         render();
+    };
+
+    const removeTask = (taskIndex) => {
+        tasks.splice(taskIndex, 1);
+                render();
+    };
+
+    const toggleTaskDone = (taskIndex) => {
+        tasks[taskIndex].done = !tasks[taskIndex].done;
+        render();
     }
+
+    const render = () => {
+        let htmlString = ""
+
+        for (const task of tasks) {
+            htmlString += `
+            <li ${task.done ? "class=\"taskList__task taskList__task--crossed \"" : "class=\"taskList__task\""}>
+            <button class="js-done">zrobione</button>
+            <button class="js-remove">usuń</button>
+            ${task.content}
+            </li>`;
+        }
+
+        document.querySelector(".js-tasks").innerHTML = htmlString;
+
+        const removeButtons = document.querySelectorAll(".js-remove");
+
+        removeButtons.forEach((removeButton, index) => {
+            removeButton.addEventListener("click", () => {
+                removeTask(index);
+            });
+           
+        });
+
+        const toggleDoneButtons = document.querySelectorAll(".js-done");
+
+        toggleDoneButtons.forEach((toogleDoneButton, index) => {
+            toogleDoneButton.addEventListener("click", () => {
+                toggleTaskDone(index);
+            });
+           
+        });
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
@@ -41,7 +71,7 @@
         }
 
         addNewTask(newTaskContent)
-    }
+    };
 
     const init = () => {
         render()
