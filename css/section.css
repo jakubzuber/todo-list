@@ -44,6 +44,12 @@
     font-size: 15px;
 }
 
+.section__headerHideButton:hover {
+    color: rgb(1, 159, 159);
+    transition: 1s;
+    cursor: pointer;
+}
+
 .section__headerDoneButton {
     background-color: white;
     border: none;
@@ -51,3 +57,12 @@
     font-size: 15px;
 }
 
+.section__headerDoneButton:hover {
+    color: rgb(1, 159, 159);
+    transition: 1s;
+    cursor: pointer;
+}
+
+.section__headerDoneButton:disabled {
+    color: gray;
+}

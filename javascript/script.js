@@ -68,8 +68,7 @@
             
             <button ${areTasksDone === true ? "disabled" : ""} class="section__headerDoneButton js-markDoneAllTasks ${tasksElements ? "" : "taskList__task--hide"}"> Ukończ wszystkie</button>
             `;
-
-            console.log(tasksElements)
+            console.log(areTasksDone)
         document.querySelector(".js-sectionHeader").innerHTML = headerButtons
     };
 

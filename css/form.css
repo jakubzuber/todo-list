@@ -32,6 +32,7 @@
     padding: 8px;
     margin-left: 15px;
     border-style: none;
+    
 }
 
 @media (max-width: 767px) {
@@ -44,6 +45,8 @@
 .form__button:hover {
     background-color: rgb(1, 141, 141);
     cursor: pointer;
+    transform: scale(1.1);
+    transition: 1s;
 }
 
 .form__button:active {
