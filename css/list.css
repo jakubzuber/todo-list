@@ -15,6 +15,10 @@
     align-items: center;
 }
 
+.taskList__task--hide {
+    display: none;
+}
+
 .list_taskText--lineThrough {
     text-decoration:line-through;
 }
