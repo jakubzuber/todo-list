@@ -65,4 +65,5 @@
 
 .section__headerDoneButton:disabled {
     color: gray;
+    cursor: not-allowed;;
 }

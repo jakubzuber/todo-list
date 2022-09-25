@@ -13,6 +13,7 @@
     display: grid;
     grid-template-columns: 1fr 15fr 1fr;
     align-items: center;
+    word-break:normal;
 }
 
 .taskList__task--hide {
@@ -42,7 +43,6 @@
 }
 
 .list_buttonRemove {
-   float: right;
    background-color: red;
    height: 33px;
    border-style: none;
